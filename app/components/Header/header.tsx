@@ -3,9 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/public/assets/LOGO.png';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
-    const [pageActive, setPageActive] = useState('home');
+    const pathName = usePathname();
 
     return (
         <header className='flex justify-between items-center p-5 md:p-11'>
@@ -16,16 +17,14 @@ export const Header = () => {
                         <Link 
                             className='font-medium mr-4 md:mr-7 text-sm md:text-xl' 
                             href='/' 
-                            onClick={() => setPageActive('home')}
-                            style={{textDecoration: pageActive === 'home' ? 'underline' : ''}}
+                            style={{textDecoration: pathName === '/' ? 'underline' : ''}}
                         >Accueil</Link>
                     </li>
                     <li>
                         <Link 
                             className='font-medium text-sm md:text-xl' 
                             href='/about' 
-                            onClick={() => setPageActive('about')}
-                            style={{textDecoration: pageActive === 'about' ? 'underline' : ''}}
+                            style={{textDecoration: pathName === '/about' ? 'underline' : ''}}
                         >A propos</Link>
                     </li>
                 </ul>

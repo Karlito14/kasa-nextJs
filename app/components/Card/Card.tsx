@@ -22,7 +22,7 @@ export const Card = (props : {card: House}) => {
         <li>
             <Link href={`/house/${props.card.id}`}>
                 <figure className='relative'>
-                    <Image src={props.card.cover} alt='' className='img-card w-full h-64 md:h-80'  />
+                    <Image src={props.card.cover} alt='' className='img-card md:h-80' width={100} height={255} />
                     <figcaption className='absolute text-white text-xl pr-5 bottom-5 left-5'>{props.card.title}</figcaption>
                 </figure>
             </Link>
