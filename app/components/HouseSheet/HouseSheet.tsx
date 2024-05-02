@@ -1,5 +1,6 @@
 import { House } from '../Card/Card';
 import { CarouselHouse } from '../Carousel/Carousel';
+import { Collapse } from '../Collapse/Collapse';
 import { Host } from '../Host/Host';
 import { TitleHouse } from '../TitleHouse/TitleHouse';
 
@@ -13,6 +14,14 @@ export const HouseSheet = (props: {house: House}) => {
                 <TitleHouse title={title} location={location} tags={tags} />
                 <Host host={host} rating={rating} />
             </section>
+            <ul className='flex flex-col md:flex-row list-none justify-between mt-4'>
+                <Collapse object={{title: 'Description', content: description}} />
+                <Collapse object={{title: 'Équipements', content: equipments}} />
+            </ul>
         </main>
     );
 };
+
+
+
+    

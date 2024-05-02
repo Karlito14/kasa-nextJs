@@ -5,7 +5,6 @@
 @layer components {
     .content-collapse {
         background-color: #F6F6F6;
-        margin-top: -5px;
         transition: all 0.4s;
         padding: 15px 20px;
     }
