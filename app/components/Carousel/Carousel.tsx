@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import style from './style.module.scss';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Image from 'next/image';
 
