@@ -8,15 +8,15 @@ export const Collapse = (props : { object : Rule | Equipement}) => {
 
     const renderContent = () => {
         if(typeof props.object.content === 'string') {
-            return <p className='content-collapse -mt-1'>{props.object.content}</p>;
+            return <p className='content-collapse h-28 px-4 py-2 -mt-1 overflow-hidden hover:overflow-auto'>{props.object.content}</p>;
         } else {
             const list: React.JSX.Element[] = [];
 
             props.object.content.map((item: string, index: number) => {
-                list.push(<li className='content-collapse' key={`${index}-${item}`}>{item}</li>);
+                list.push(<li className='content-collapse py-2 px-4' key={`${index}-${item}`}>{item}</li>);
             });
 
-            return <ul className='-mt-1 bg-[#F6F6F6]'>{list}</ul>;
+            return <ul className='-mt-1 h-28 bg-[#F6F6F6] overflow-hidden hover:overflow-auto'>{list}</ul>;
         }
     };
 
