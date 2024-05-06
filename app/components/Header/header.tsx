@@ -22,8 +22,8 @@ export const Header = () => {
                     <li>
                         <Link 
                             className='font-medium text-sm md:text-xl' 
-                            href='/about' 
-                            style={{textDecoration: pathName === '/about' ? 'underline' : ''}}
+                            href='/PageAbout' 
+                            style={{textDecoration: pathName === '/PageAbout' ? 'underline' : ''}}
                         >A propos</Link>
                     </li>
                 </ul>
